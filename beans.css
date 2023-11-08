@@ -18,7 +18,7 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-input[type="text"], input[type="email"], textarea, input[type="button"], input[type="tel"] {
+input[type="text"], input[type="email"], textarea, input[type="button"], input[type="tel"], button {
 
     background-color: rgb(167, 144, 108);
     color: black;
@@ -39,7 +39,7 @@ input[type="text"]::placeholder, input[type="email"]::placeholder, textarea::pla
     justify-content: center;
 }
 
-input[type="button"]:hover {
+input[type="button"]:hover, button:hover {
     background-color: rgb(267, 244, 208);
     cursor: pointer;
 }

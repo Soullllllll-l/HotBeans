@@ -13,8 +13,7 @@ function submit() {
     }
     var intro=readvalue("intro");
     console.log(job, fullname, email, intro, phonenumber);
-    document.getElementById("error").innerText="Credentials Saved"
-    document.getElementById("submit").style.display="flex"
+    document.getElementById("error").innerText="Credentials Saved";
 }
 
 function readvalue(id) {
@@ -33,4 +32,16 @@ function validation(id) {
 
 const urlparams=new URLSearchParams(location.search);
 var job=urlparams.get("job")
-document.getElementById("job").value=job
+document.getElementById("job").value=job;
+
+function human() {
+    document.getElementById("human").style.backgroundColor = "rgb(255, 255, 0)";
+    document.getElementById("human").innerText = "Verifying...";
+
+    setTimeout(() => {
+        document.getElementById("human").style.backgroundColor = "rgb(0, 255, 0)";
+        document.getElementById("human").innerText = "Verified";
+
+        document.getElementById("submit").style.display="flex";
+    }, 2500);
+}
