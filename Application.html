@@ -8,15 +8,30 @@
     <link rel="stylesheet" href="beans.css">
 </head>
 <body>
-    <div class="navbar"><h1>Hot Beans Web</h1></div>
-    <button onclick="location.href='mainpage.html'">Back</button>
+    <div class="navbar"><h1>Hot Beans Web Developer Application</h1></div>
+    <div class="dropdown" >
+        <button class="dropbttn">
+            <span class="material-symbols-rounded">menu</span>
+        </button>
+        <div class="dropdown-content">
+            <a href="mainpage.html">Main Page</a>
+            <div class="divider"></div>
+            <a href="webcourse.html">Web Development Courses</a>
+            <div class="divider"></div>
+            <a href="webdevteam.html">Current Web Developer Team</a>
+            <!--<div class="divider"></div>
+            <a href="Application.html?job=Senior Web Developer">Application For Senior Web Developer</a>
+            <div class="divider"></div>
+            <a href="Application.html?job=Junior Web Developer">Application For Junior Web Developer</a>-->
+        </div>
+    </div>
     <div class="column">
         <input type="text" placeholder="Job Description" id="job" disabled>
         <input type="text" placeholder="Full Name" id="fullname">
         <input type="tel" placeholder="Phone Number" id="phonenumber">
         <input type="email" placeholder="Email" id="email">
         <textarea name="intro" id="intro" placeholder="Brief Introduction And Why You Want To Work Here" cols="35" rows="15"></textarea>
-        <button id="human" onclick="human()">Verify you are human</button>
+        <button class="n" id="human" onclick="human()">Verify you are human</button>
         <input id="submit" style="display: none;" type="button" value="Submit" onclick="submit()">
         <p id="error"></p>
     </div>

@@ -1,34 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
 * {
     color: white;
+    font-family: "Noto Sans";
     transition: 0.25s ease;
 }
 
 body {
-    background-color: rgb(0, 0, 0);
+    background-color: black;
     gap: 0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 .navbar {
-    background-color: rgb(255, 0, 0);
+    background-color: #ac417840;
     padding: 1.5rem;
     text-align: center;
     border-radius: 50px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-input[type="text"], input[type="email"], textarea, input[type="button"], input[type="tel"], button {
+.banner {
+    width: 100%;
+    height: 50vh;
+    background-image: url("https://www.sierracollege.edu/wp-content/uploads/2022/08/computer-lab.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
 
-    background-color: rgb(167, 144, 108);
-    color: black;
-    border: none;
-    padding: 1rem;
+    overflow: hidden;
+}
+
+button:not(.dropbttn) {
     border-radius: 25px;
 }
 
+input[type="text"], input[type="email"], textarea, input[type="button"], input[type="tel"], button[class="n"] {
+    border-radius: 25px;
+    background-color: rgb(60, 5, 71);
+    border: none;
+    padding: 1rem;
+}
+
 input[type="text"]::placeholder, input[type="email"]::placeholder, textarea::placeholder, input[type="button"]::placeholder, input[type="tel"]::placeholder{
-    color: black;
+    border-radius: 25px;
+    color: white;
+}
+
+button[class="dropbttn"] {
+    background-color: rgb(60, 6, 71);
+    cursor: pointer;
+    padding: 1rem;
 }
 
 .column {
@@ -40,56 +63,84 @@ input[type="text"]::placeholder, input[type="email"]::placeholder, textarea::pla
 }
 
 input[type="button"]:hover, button:hover, button[class=dropbttn]:hover{
-    background-color: rgb(267, 244, 208);
+    background-color: rgb(160, 105, 171);
     cursor: pointer;
 }
 
+.back{
+    width: 10vw;
+    background-color: rgb(167, 144, 108);
+    color: black;
+    border: none;
+    padding: 1rem;
+    border-radius: 25px;
+}
+
 a:hover{
-    background-color: rgb(184, 103, 122);
+    background-color: rgb(167, 105, 171);
     cursor: pointer;
     border-radius: 25px;
 }
 
-.dropdownbuttn {
+.dropbttn {
     background-color: #04AA6D;
     color: rgb(83, 3, 3);
     font-size: 16px;
     border: none;
-  }
-  
 
-  .dropdown {
+    border-radius: 25px
+}
+
+#getsharpmf {
+    border-bottom-right-radius: 25px;
+}
+
+.dropdown {
     position: relative;
     display: inline-block;
-  }
-  
 
-  .dropdown-content {
-    border-radius: 25px;
+    width: 0;
+}
+
+.divider {
+    width: 100%;
+    height: 1.5px;
+    background-color: black;
+}
+
+.dropdown-content {
+    flex-direction: column;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
     gap: 1rem;
     display: none;
     position: absolute;
-    background-color: #54037a;
+    background-color: rgb(60, 6, 71);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-  }
+}
   
-  .dropdown-content a {
+.dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-  }
+}
   
 
-  .dropdown-content a:hover {background-color: rgb(253, 236, 2)ddd; gap: 1rem;}
-  
-
-  .dropdown:hover .dropdown-content {
-    display: block; 
+.dropdown-content a:hover {
+    background-color: rgb(253, 236, 2)ddd;
     gap: 1rem;
 }
   
 
-  .dropdown:hover .dropdownbttn {background-color: #ff8800;}
+.dropdown:hover .dropdown-content {
+    display: flex; 
+    gap: 1rem;
+}
+
+.dropdown:hover .dropdownbttn {
+    background-color: #ff8800;
+}
