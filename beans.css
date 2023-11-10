@@ -39,7 +39,57 @@ input[type="text"]::placeholder, input[type="email"]::placeholder, textarea::pla
     justify-content: center;
 }
 
-input[type="button"]:hover, button:hover {
+input[type="button"]:hover, button:hover, button[class=dropbttn]:hover{
     background-color: rgb(267, 244, 208);
     cursor: pointer;
 }
+
+a:hover{
+    background-color: rgb(184, 103, 122);
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.dropdownbuttn {
+    background-color: #04AA6D;
+    color: rgb(83, 3, 3);
+    font-size: 16px;
+    border: none;
+  }
+  
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+
+  .dropdown-content {
+    border-radius: 25px;
+    gap: 1rem;
+    display: none;
+    position: absolute;
+    background-color: #54037a;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+
+  .dropdown-content a:hover {background-color: rgb(253, 236, 2)ddd; gap: 1rem;}
+  
+
+  .dropdown:hover .dropdown-content {
+    display: block; 
+    gap: 1rem;
+}
+  
+
+  .dropdown:hover .dropdownbttn {background-color: #ff8800;}
