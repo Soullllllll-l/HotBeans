@@ -28,8 +28,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 25px;
-
-    overflow: hidden;
 }
 
 button:not(.dropbttn) {
