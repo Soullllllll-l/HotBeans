@@ -30,11 +30,15 @@ body {
     border-radius: 25px;
 }
 
+.appc {
+    padding: 2rem;
+}
+
 button:not(.dropbttn) {
     border-radius: 25px;
 }
 
-input[type="text"], input[type="email"], textarea, input[type="button"], input[type="tel"], button[class="n"] {
+input[type="text"], input[type="email"], textarea, input[type="button"], input[type="tel"], button[class="n"], button[class="appc"] {
     border-radius: 25px;
     background-color: rgb(60, 5, 71);
     border: none;
@@ -60,7 +64,7 @@ button[class="dropbttn"] {
     justify-content: center;
 }
 
-input[type="button"]:hover, button:hover, button[class=dropbttn]:hover{
+input[type="button"]:hover, button:hover, button[class=dropbttn]:hover, button[class="appc"]:hover{
     background-color: rgb(160, 105, 171);
     cursor: pointer;
 }
