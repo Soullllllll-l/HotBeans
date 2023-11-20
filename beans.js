@@ -139,3 +139,13 @@ function sub2chonk() {
     }
 }
     
+
+const banner = document.querySelector('.banner');
+const drone = document.querySelector('.drone');
+
+banner.addEventListener('mousemove', (e) => {
+  const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+  const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+
+  drone.style.transform = `translate(${xAxis}px, ${yAxis}px)`; // Apply transformation to the drone element
+});
