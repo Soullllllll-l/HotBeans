@@ -6,26 +6,41 @@ var jobValid = false;
 var introductionValid = false;
 var humanvalid = false;
 
-// function submit() {
-//     var job=readvalue("job");
-//     var firstname=readvalue("forename");
-//     var lastname=readvalue("surname")
-//     var phonenumber=readvalue("phone");
-//     var introduction=readvalue("introduction")
-//     if(validation("email")){
-//         var email=readvalue("email");
-//         document.getElementById("error").innerText="Valid Email Detected"
-//     }
+
+function submit() {
+
+    var job=readvalue("job");
+
+     var firstname=readvalue("forename");
+
+     var lastname=readvalue("surname")
+
+     var phonenumber=readvalue("phone");
+
+     var introduction=readvalue("introduction")
+
+     if(validation("email")){
+
+        var email=readvalue("email");
+
+         document.getElementById("error").innerText="Valid Email Detected"
+
+        }
 
 
+     else{
 
-//     else{
-//         console.log("email gone wrong");
-//         document.getElementById("error").innerText="error_invalid_inputs"
-//         return false;
-//     }
-//     var intro=readvalue("introduction");
-// }
+        console.log("email gone wrong");
+
+         document.getElementById("error").innerText="error_invalid_inputs"
+
+         return false;
+
+        }
+
+     var intro=readvalue("introduction");
+
+    }
 
 function readvalue(id) {
     return document.getElementById(`${id}`).value;
@@ -119,6 +134,10 @@ var job=urlparams.get("job");
 document.getElementById("job").value=job;
 validate('job');
 
+function human() {
+    
+}
+
 function humanvalid() {
     document.getElementById("human").style.backgroundColor = "rgb(255, 255, 0)";
     document.getElementById("human").innerText = "Verifying...";
@@ -138,14 +157,4 @@ function sub2chonk() {
         document.getElementById("error").innerText="Credentials Saved";
     }
 }
-    
 
-const banner = document.querySelector('.banner');
-const drone = document.querySelector('.drone');
-
-banner.addEventListener('mousemove', (e) => {
-  const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
-  const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
-
-  drone.style.transform = `translate(${xAxis}px, ${yAxis}px)`; // Apply transformation to the drone element
-});
