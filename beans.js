@@ -46,6 +46,7 @@ function readvalue(id) {
     return document.getElementById(`${id}`).value;
 }
 
+
 function validate(data) {
     if (data == "email") {
         data = document.getElementById("email").value;
@@ -83,15 +84,14 @@ function validate(data) {
     }
  
     else if (data == "forename") {
-        data = document.getElementById("forename").value;
- 
-        if (data != "") {
+        var forenameValue = document.getElementById("forename").value.trim();
+    
+        if (forenameValue !== "") {
             forenameValid = true;
-        }
- 
-        else {
+        } else {
             forenameValid = false;
         }
+    
     }
  
     else if (data == "surname") {
@@ -112,11 +112,12 @@ function validate(data) {
  
     else if (data == "introduction") {
         data = document.getElementById("introduction").value;
- 
+    
         if (data != "") {
             introductionValid = true;
         }
     }
+    
 }
 
 function validation(id) {
@@ -134,11 +135,7 @@ var job=urlparams.get("job");
 document.getElementById("job").value=job;
 validate('job');
 
-function human() {
-    
-}
-
-function humanvalid() {
+function validatehuman() {
     document.getElementById("human").style.backgroundColor = "rgb(255, 255, 0)";
     document.getElementById("human").innerText = "Verifying...";
 
@@ -152,9 +149,15 @@ function humanvalid() {
 }
 
 function sub2chonk() {
-    if (emailValid && phoneValid && forenameValid && surnameValid && jobValid && introductionValid && humanvalid) {
-        console.log(job, firstname, lastname, email, introduction, phonenumber);
-        document.getElementById("error").innerText="Credentials Saved";
+    console.log(emailValid, phoneValid, forenameValid, surnameValid, introductionValid, humanvalid);
+
+    if (emailValid && phoneValid && forenameValid && surnameValid && introductionValid && humanvalid) {
+        console.log("All validations passed!");
+        // Add console logs or checks for other variables or actions within this if block
+    } else {
+        console.log("Some validations failed!");
+        // Add console logs or checks for other variables or actions within this else block
     }
 }
+
 
