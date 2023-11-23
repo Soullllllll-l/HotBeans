@@ -1,12 +1,3 @@
-var forenameValid = false;
-var surnameValid = false;
-var emailValid = false;
-var phoneValid = false;
-var jobValid = false;
-var introductionValid = false;
-var humanvalid = false;
-
-
 function submit() {
 
     var job=readvalue("job");
@@ -39,85 +30,15 @@ function submit() {
         }
 
      var intro=readvalue("introduction");
+     var job=readvalue("job");
+     var firstname=readvalue("forename");
+     var lastname=readvalue("surname")
+     var phonenumber=readvalue("phone");
 
     }
 
 function readvalue(id) {
     return document.getElementById(`${id}`).value;
-}
-
-
-function validate(data) {
-    if (data == "email") {
-        data = document.getElementById("email").value;
- 
-        if (/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(data)) {
-
-           
-            emailValid = true;
-        }
- 
-        else {
- 
-            emailValid = false;
-        }
- 
-
-    }
- 
-    else if (data == "phone") {
-        data = document.getElementById("phone").value;
- 
-        if (/^(?=(?:\+|0{2})?(?:(?:[\(\-\)\.\/ \t\f]*\d){7,10})?(?:[\-\.\/ \t\f]?\d{2,3})(?:[\-\s]?[ext]{1,3}[\-\.\/ \t\f]?\d{1,4})?$)((?:\+|0{2})\d{0,3})?(?:[\-\.\/ \t\f]?)(\(0\d[ ]?\d{0,4}\)|\(\d{0,4}\)|\d{0,4})(?:[\-\.\/ \t\f]{0,2}\d){3,8}(?:[\-\s]?(?:x|ext)[\-\t\f ]?(\d{1,4}))?$/.test(data)) {
-
- 
-            phoneValid = true;
-        }
- 
-        else {
-
- 
-            phoneValid = false;
-        }
- 
-
-    }
- 
-    else if (data == "forename") {
-        var forenameValue = document.getElementById("forename").value.trim();
-    
-        if (forenameValue !== "") {
-            forenameValid = true;
-        } else {
-            forenameValid = false;
-        }
-    
-    }
- 
-    else if (data == "surname") {
-        data = document.getElementById("surname").value;
- 
-        if (data != "") {
-            surnameValid = true;
-        }
-    }
- 
-    else if (data == "job") {
-        data = document.getElementById("job").value;
- 
-        if (data != "") {
-            jobValid = true;
-        }
-    }
- 
-    else if (data == "introduction") {
-        data = document.getElementById("introduction").value;
-    
-        if (data != "") {
-            introductionValid = true;
-        }
-    }
-    
 }
 
 function validation(id) {
@@ -133,10 +54,10 @@ function validation(id) {
 const urlparams=new URLSearchParams(location.search);
 var job=urlparams.get("job");
 document.getElementById("job").value=job;
-validate('job');
+
 
 function validatehuman() {
-    document.getElementById("human").style.backgroundColor = "rgb(255, 255, 0)";
+    document.getElementById("human").style.backgroundColor = "rgb(255, 0, 0)";
     document.getElementById("human").innerText = "Verifying...";
 
     setTimeout(() => {
@@ -148,16 +69,10 @@ function validatehuman() {
     }, 2500);
 }
 
-function sub2chonk() {
-    console.log(emailValid, phoneValid, forenameValid, surnameValid, introductionValid, humanvalid);
 
-    if (emailValid && phoneValid && forenameValid && surnameValid && introductionValid && humanvalid) {
-        console.log("All validations passed!");
-        // Add console logs or checks for other variables or actions within this if block
-    } else {
-        console.log("Some validations failed!");
-        // Add console logs or checks for other variables or actions within this else block
-    }
+function send() {
+    setTimeout(() => {
+        window.location.assign("appsuccess.html")
+}, 4000);
 }
-
 

@@ -30,16 +30,16 @@
     <div class="column">
         <input type="text" placeholder="Job Description" id="job" onchange="validate('job')" disabled>
         <div class="row">
-            <input type="text" placeholder="First name" id="forename" onchange="validateforename()">
-            <input type="text" placeholder="Last name" id="surname" onchange="validate('surname')">
+            <input type="text" placeholder="First name" id="forename">
+            <input type="text" placeholder="Last name" id="surname">
         </div>
         <div class="row">
-            <input type="tel" placeholder="Phone Number" id="phone" onchange="validate('phone')">
-            <input type="email" placeholder="Email" id="email" onchange="validate('email')">
+            <input type="tel" placeholder="Phone Number" id="phone">
+            <input type="email" placeholder="Email" id="email">
         </div>
-        <textarea name="introduction" id="introduction" placeholder="Brief Introduction And Why You Want To Work Here" cols="35" rows="15" onchange="validate('introduction')"></textarea>
+        <textarea name="introduction" id="introduction" placeholder="Brief Introduction And Why You Want To Work Here" cols="35" rows="15"></textarea>
         <button class="n" id="human" onclick="validatehuman()">Verify you are human</button>
-        <input id="submit" style="display: none;" type="button" value="Submit" onclick="sub2chonk()">
+        <input id="submit" style="display: none;" type="button" value="Submit" onclick="submit(); send()">
         <p id="error"></p>
     </div>
 
