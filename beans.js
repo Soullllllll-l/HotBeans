@@ -71,6 +71,7 @@ function validatehuman() {
 
 
 function send() {
+    document.getElementById("submit").value = "Loading...";
     setTimeout(() => {
         window.location.assign("appsuccess.html")
 }, 4000);
