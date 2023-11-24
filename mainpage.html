@@ -9,7 +9,7 @@
     <link rel="icon" href="icon2.webp">
 <body>
     
-    <div class="navbar"><h1>Hot Beans Web</h1></div>
+    <div class="navbar" onclick="on()"><h1>Hot Beans Web</h1></div>
     <div class="container">
     <div class="banner" aria-label="Men Crowding on a meeting table to work">
         <div class="dropdown" >
@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="bg-layer"></div>
-         <div class="drone"><img src="drone.png"></div> 
+         <!-- <div class="drone"><img src="drone.png"></div>  -->
     </div>
     <h1 style="font-family: sans-serif; color: rgb(90, 35, 101);">What We Do</h1>
     <p style="color: white; font-size: 150%;">At the heart of Hot Beans Web lies an unwavering dedication to craftsmanship that transcends conventional boundaries. We're not just web developers and designers; we're artisans, meticulously sculpting digital experiences that resonate, captivate, and inspire.
@@ -43,7 +43,8 @@
         Hot Beans Web isn't just a service provider; we're your partners in crafting a digital legacy. Join us on this transformative journey, where innovation meets creativity, and together, let's script a narrative of triumph in the ever-evolving digital sphere.</p>
        <!-- <button class="lightmode" onclick="document.body.style.filter='invert(1)'" >Light Mode</button> -->
     </div>
-       <script>
+        <script src="beans.js"></script>
+       <!-- <script>
         const banner = document.querySelector('.banner');
         const drone = document.querySelector('.drone');
 
@@ -53,6 +54,6 @@
 
             drone.style.transform = `translate(${xAxis}px, ${yAxis}px)`;
         });
-    </script>
+    </script> -->
 </body>
 </html>

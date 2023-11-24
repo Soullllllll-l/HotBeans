@@ -51,9 +51,15 @@ function validation(id) {
     }
 }
 
-const urlparams=new URLSearchParams(location.search);
-var job=urlparams.get("job");
-document.getElementById("job").value=job;
+try{
+    const urlparams=new URLSearchParams(location.search);
+    var job=urlparams.get("job");
+    document.getElementById("job").value=job;
+}
+
+catch {
+    //
+}
 
 
 function validatehuman() {
@@ -77,3 +83,16 @@ function send() {
 }, 4000);
 }
 
+var i = 1
+ 
+function on() {
+    console.log(i);
+
+    if(i < 15) {
+        i++;
+    }
+ 
+    else {
+        window.location.assign("snekgam.html")
+    }
+}
